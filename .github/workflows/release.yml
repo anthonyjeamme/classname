@@ -1,7 +1,9 @@
 name: Release
 
 on:
-  workflow_dispatch:
+  push:
+    branches:
+      - main
 
 jobs:
   publish:
@@ -16,6 +18,9 @@ jobs:
       - uses: actions/setup-node@main
         with:
           registry-url: "https://registry.npmjs.org"
+
+      - name: Test project
+        run: npm run test
 
       - name: Build project
         run: npm run build

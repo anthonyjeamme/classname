@@ -16,6 +16,10 @@ jobs:
       - uses: actions/setup-node@main
         with:
           registry-url: "https://registry.npmjs.org"
+
+      - name: Build project
+        run: npm run build
+
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

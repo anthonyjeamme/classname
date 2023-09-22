@@ -1,4 +1,13 @@
-A JavaScript utility for CSS/SCSS modules.
+> A JavaScript utility for CSS/SCSS modules.
+
+<p>
+  <a aria-label="NPM version" href="https://www.npmjs.com/package/@anthonyjeamme/classname">
+    <img alt="" src="https://img.shields.io/npm/v/@anthonyjeamme/classname.svg">
+  </a>
+  <a aria-label="License" href="#">
+    <img alt="" src="https://img.shields.io/npm/l/classnames.svg">
+  </a>
+</p>
 
 # Installation :
 

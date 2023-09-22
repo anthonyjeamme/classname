@@ -4,3 +4,4 @@ jest.config.js
 tsconfig.json
 package-lock.json
 yarn.lock
+.github

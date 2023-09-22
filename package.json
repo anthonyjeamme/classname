@@ -1,6 +1,6 @@
 {
   "name": "@anthonyjeamme/classname",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "A JavaScript utility for CSS modules.",
   "main": "dist/classname.js",
   "types": "dist/classname.d.ts",

@@ -11,12 +11,12 @@ npm i @anthonyjeamme/classname
 _Component.tsx_ :
 
 ```tsx
-import classNameModule from '@anthonyjeamme/classname';
-import styles from './Component.module.scss';
+import classNameModule from "@anthonyjeamme/classname";
+import styles from "./Component.module.scss";
 const className = classNameModule(styles);
 
 const Component = () => {
-  return <div {...className('Component')}>Component</div>;
+  return <div {...className("Component")}>Component</div>;
 };
 ```
 
@@ -30,18 +30,18 @@ _Component.module.scss_ :
 
 # Using variables
 
-_Component.module.scss_ :
+_Component.tsx_ :
 
 ```tsx
-import classNameModule from '@anthonyjeamme/classname';
-import styles from './Component.module.scss';
+import classNameModule from "@anthonyjeamme/classname";
+import styles from "./Component.module.scss";
 const className = classNameModule(styles);
 
 const Component = () => {
   const [active, setActive] = useState(false);
-  const [type, setType] = useState('user');
+  const [type, setType] = useState("user");
 
-  return <div {...className('Component', { active, type })}>Component</div>;
+  return <div {...className("Component", { active, type })}>Component</div>;
 };
 ```
 
@@ -66,7 +66,7 @@ _Component.module.scss_ :
 Prefixing with `:` allows to use global classes :
 
 ```js
-className(':flex');
+className(":flex");
 ```
 
 _global.css_ :
@@ -82,9 +82,9 @@ _global.css_ :
 Custom prefix can be set this way :
 
 ```js
-const className = classNameModule(styles, { globalPrefix: '@' });
+const className = classNameModule(styles, { globalPrefix: "@" });
 
-className('@flex'); // Returns '.flex'
+className("@flex"); // Returns '.flex'
 ```
 
 # Advanced configuration
@@ -98,7 +98,7 @@ const className = classNameModule(styles, { logUnfoundValues: true });
 Then, this example will log a warning :
 
 ```js
-className('UnknownClass');
+className("UnknownClass");
 ```
 
 ## Retaining Unfound Classes
@@ -107,10 +107,10 @@ This is an alternative way to use global variables :
 
 ```js
 const className = classNameModule(styles, { keepUnfoundValues: false });
-className('UnknownClass'); // Returns ``
+className("UnknownClass"); // Returns ``
 ```
 
 ```js
 const className = classNameModule(styles, { keepUnfoundValues: true });
-className('UnknownClass'); // Returns `.UnknownClass`
+className("UnknownClass"); // Returns `.UnknownClass`
 ```
